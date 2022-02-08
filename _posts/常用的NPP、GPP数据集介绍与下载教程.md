@@ -1,27 +1,8 @@
 
 
-# 数据简介
-
-中国要在2030年实现碳达峰，2060年实现碳中和。如何度量生态系统碳源汇，并检测其时空的动态分布？科学家选择了陆地碳循环中的关键部分 NPP，将其视作生态系统能量流动和生态系统功能的指示器。
-
-总初级生产力GPP（Gross Primary Production)是在一定时间内生态系统生产者获得化学能，并将其储存于生物量中的速率。
-
-被植物所固定的能量中的部分被用于自身生长R，剩余部分的生产量就是净初级生产力NPP（Net   Primary   Production
-） 。
-
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/img/202201251725644.png)
-
-目前中文互联网关于NPP的数据集的总结博客几乎没有，我这里简单总结了九种常见的NPP及GPP数据集。
-
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/img/202201251804488.png)
-
 # 全球数据集
 
-主要是介绍几种覆盖全球的NPP/GPP数据集。
-
-## MODIS GPP\NPP （500m）
-
-MODIS GPP\NPP数据是目前使用最广泛的数据集，该数据集已完成产品与地面参考点的比较验证，并提供14个数据类别可供用户下载。
+## **MODIS Gross Primary Production (GPP)/Net Primary Production (NPP)**
 
 
 
@@ -42,188 +23,127 @@ MODIS GPP\NPP数据是目前使用最广泛的数据集，该数据集已完成�
 | MYD17A3HGF v061 | NPP  | 500m   | 1年      | Aqua  |
 | MYD17A3HGF v006 | NPP  | 500m   | 1年      | Aqua  |
 
-其中，Terra卫星的观测数据即MOD数据，aqua卫星观测数据为MYD数据，Terra是于当地的上午10:30过境，auqa是于当地下午1:30过境。A2是GPP数据，每8天进行数据合成。A3是NPP数据，每一年进行合成。
 
-如果需要下载该系列数据，首先进入USGS的资源搜索栏（https://lpdaac.usgs.gov/product_search/），搜索Primary Productivity：
+
+
+
+https://lpdaac.usgs.gov/product_search/?query=Primary+Productivity&view=cards&sort=title
 
 ![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/img/202201241509080.png)
 
-选中需要下载的数据集，点击进入，页面会展示该数据集的相关信息与下载方式。点击Access Data，获取下载链接：
 
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/img/202201251047754.png)
 
-下载方式有好几种，可以选择NASA Earthdata Search，因为可以直接跳转到数据选择页面：
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/img/202201251049805.png)
+https://modis.gsfc.nasa.gov/data/dataprod/mod17.php
 
-如果没有登陆NASA，先登陆，然后点击数据进行下载。
+MOD17A3	MYD17A2 全球 modis
 
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/img/202201251053011.png)
-
-登陆网站、设置筛选时间（2022年1月初）、设置地点（成都和资阳市）、选择影像进行下载：
-
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/img/202201251112761.jpg)
-
-下载后使用软件打开影像，看一看：
-
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/img/202201251711300.png)
+## Improved estimate of global gross primary production for reproducing its long-term variation, 1982–2018
 
 
 
-## 1982–2018年GPP（0.05°）
-
-这个数据集发表在ESSD上，第一作者为中山大学的**Zheng Yi **。作者通过EC-LUE 模型生成了0.05°空间分辨率和8天时间分辨率的1982–2018年全球GPP 数据集。
+通过EC-LUE 模型生成的0.05 ∘纬度×0.05 ∘经度和8 d天间隔的长期全球GPP 数据集
 
 ![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20220125000124.png)
 
-如果需要下载该数据集，需打开论文的官方链接（https://essd.copernicus.org/articles/12/2725/2020/），选择Assets中的数据链接
-
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/img/202201261026121.png)
-
-打开链接后，选择对应年份的数据进行下载：
+https://essd.copernicus.org/articles/12/2725/2020/
 
 ![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/img/202201241422318.png)
 
-待数据下载完毕后，解压看到该年份每隔8天的数据集，最后几个数字代表着天数，比如2018121代表2018年的第121天：
+*参考：Zheng Y ,  Shen R ,  Wang Y , et al. Improved estimate of global gross primary production for reproducing its long-term variation, 1982–2017[J]. Earth System Science Data Discussions, 2019:1-31.*
 
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/img/202201261051910.png)
-
-加载到gis软件中，查看数据效果：
-
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/img/202201261053037.png)
-
-
-
-*相关文献：Zheng Y ,  Shen R ,  Wang Y , et al. Improved estimate of global gross primary production for reproducing its long-term variation, 1982–2017[J]. Earth System Science Data Discussions, 2019:1-31.*
-
-## 1988-2020年GPP （0.25°）
-
-该数据集是基于微波遥感衍生的第一个全球 GPP 数据集，覆盖1988-2020 年，空间分辨率为 0.25°。该数据的制作方法是使用新的合并频率植被光学深度气候档案与 ERA5-Land 气温数据相结合，在新型汇驱动 GPP 估计方法上制作全球 GPP 数据。 
+## VODCA2GPP – A new global, long-term (1988–2020) GPP dataset from microwave remote sensing
 
 ![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/img/202201241512445.png)
 
-如果需要下载该数据，首先计入论文地址：https://essd.copernicus.org/preprints/essd-2021-209/
+论文地址：https://essd.copernicus.org/preprints/essd-2021-209/
 
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/img/202201261048624.png)
-
-进入数据下载界面，点击下载。该数据是一个nc数据合集，包括了所有年份。
+分辨率0.25°x 0.25°，大约是28公里分辨率
 
 ![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/img/202201241515943.png)
 
-*相关文献：Benjamin W, Irene T,2, Leander M , et al. VODCA2GPP – A new global, long-term (1988–2020) GPP dataset from microwave remote sensing[J]. Earth System Science Data, 2021*
+下载地址：https://researchdata.tuwien.ac.at/records/1k7aj-bdz35
 
-## 2000-2016年GPP （0.05°）
+*参考：Benjamin W, Irene T,2, Leander M , et al. VODCA2GPP – A new global, long-term (1988–2020) GPP dataset from microwave remote sensing[J]. Earth System Science Data, 2021*
 
-该数据集包含来自植被光合作用模型 (VPM) 的 GPP，具有两个空间分辨率（0.05 和 0.5 度）和三个时间分辨率（8 天、每月、每年）
+## A global moderate resolution dataset of gross primary production of vegetation for 2000–2016
 
 ![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20220125001753.png)
 
-如果需要下载该数据，进入美国农业部的数据库网站，或者点击这个链接（https://data.nal.usda.gov/dataset/global-moderate-resolution-dataset-gross-primary-production-vegetation-2000%E2%80%932016）
+该数据集包含来自植被光合作用模型 (VPM) 的 GPP，具有两个空间分辨率（0.05 和 0.5 度）和三个时间分辨率（8 天、每月、每年）
 
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/img/202201261203602.png)
+https://data.nal.usda.gov/dataset/global-moderate-resolution-dataset-gross-primary-production-vegetation-2000%E2%80%932016
 
-下载资源文件，这个文件解压之后会有两个.tab文件：
+*参考： Zhang Y ,  Xiao X ,  Wu X , et al. A global moderate resolution dataset of gross primary production of vegetation for 2000–2016[J]. Scientific Data, 2017, 4:170165.*
 
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/img/202201261208797.png)
-
-使用记事本打开具有链接的.tab格式文件，复制相关年份的链接，比如2016年就是：https://hs.pangaea.de/Maps/GPPVPM/gpp_2016.zip，读者可以将2016修改为2000-2016任意年份也可下载。
-
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/img/202201261207556.png)
-
-数据很大，我就不演示数据下载了：
-
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/img/202201261205075.png)
-
-*相关文献： Zhang Y ,  Xiao X ,  Wu X , et al. A global moderate resolution dataset of gross primary production of vegetation for 2000–2016[J]. Scientific Data, 2017, 4:170165.*
-
-## 1951-2000年NPP （0.5°）
-
-数据集名称：World maps of climatological net primary production of biomass, NPP
-
-该数据集是基于最新的温度和降水网格数据集，生成了1951 年至 2000 年期间的 NPP。
+## **World maps of climatological net primary production of biomass, NPP**
 
 ![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/img/202201241635184.png)
 
-数据下载需进入FAO的资源搜索网页，点击搜索**World maps of climatological net primary production of biomass**：
+1951-2000
 
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/img/202201261124213.png)
+新版本的全球净初级生产 (NPP) 地图基于最新的温度和降水网格数据集。这些地图根据来自 CRU 和 GPCP VASClimO 的数据集显示了 1951 年至 2000 年期间的 NPP。作为 GeoTiffs 的 NPP (5minx5min) 高分辨率地图可在此处下载。
+1951-1975 年和 1976-2000 年期间的差异：
+1951-1975 年和 1976-2000 年期间气候 npp 的差异出现在世界某些地区。数据显示了这些差异的纬度依赖性。它表明如果温度是限制因素，大多数纬度的 npp 会增加。然而，尤其是在北纬 0 度到 20 度之间，npp 由于其降水依赖性而下降。CRU/VASClimO 数据集在 1951-1975 年和 1976-2000 年间 npp 差异的高分辨率图像也作为 GeoTIFF 提供，供下载。
+核电厂的气候敏感性：
+已针对地球上的每个位置计算了 NPP 对年平均温度 dNPP/dT 和年平均降水量 dNPP/dP 变化的敏感性。关于年平均降水量和年平均温度变化的净初级生产 NPP 的敏感性（以 g（干物质）/m2/年计）的高分辨率 GeoTIFF 图像也可在本表格的分布信息部分下载。
 
-进入页面后，选择对应的时间段进行下载。需要注意该数据集只有时间段，没有具体的年份：
+https://www.fao.org/nr/climpag/globgrids/npp_en.asp
 
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/img/202201261125450.png)
-
-下载数据后打开影像:
-
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/img/202201261127172.png)
-
-*相关文献：**J Grieser, R Gommes, S Cofield, & M Bernardi. World maps of climatological net primary production of biomass, NPP.*
+*参考：**J Grieser, R Gommes, S Cofield, & M Bernardi. World maps of climatological net primary production of biomass, NPP.*
 
 # 区域数据集
 
-主要介绍几个比较实用的和有趣的区域数据集。比如说美国的30m分辨率NPP以及美国的逐日GPP。
+## A daily, 250 m and real-time gross primary productivity product (2000–present) covering the contiguous United States
 
-## 美国2000-2019年每天 GPP（250m）
-
-该数据集是Chongya Jiang于2021年发表在ESSD上，该数据集覆盖了美国本土的250m分辨率的逐日GPP数据。
+美国 250m 2000-2019年  每日GPP数据
 
 ![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/微信截图_20220124225839.jpg)
 
-若需要下载该数据集，打开论文网址：https://essd.copernicus.org/articles/13/281/2021/
+https://essd.copernicus.org/articles/13/281/2021/
 
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/img/202201261223525.png)
+下载地址：https://daac.ornl.gov/cgi-bin/dsviewer.pl?ds_id=1786
 
-点击DOI，进入下载地址：https://daac.ornl.gov/cgi-bin/dsviewer.pl?ds_id=1786，登陆NASA账号：
+总计11.6TB
 
+*参考：Jiang C ,  Guan K ,  Wu G , et al. A daily, 250 m and real-time gross primary productivity product (2000–present) covering the contiguous United States[J]. Earth System Science Data, 2021, 13(2):281-298.*
 
+## Landsat Gross Primary Production CONUS
 
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/img/202201261225663.png)
+1990年-2019年 30米分辨率 基于landsat的NPP(每年)与GPP（每16天）
 
-然后将页面拉到底部，选择相应的数据下载。该数据共计11.6TB，选择感兴趣的数据即可：
+30米 美国 https://www.ntsg.umt.edu/project/landsat/landsat-productivity.php
 
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/img/202201261226675.png)
-
-*相关文献：Jiang C ,  Guan K ,  Wu G , et al. A daily, 250 m and real-time gross primary productivity product (2000–present) covering the contiguous United States[J]. Earth System Science Data, 2021, 13(2):281-298.*
-
-## 美国1990年-2019年每16天 NPP/GPP（30米）
-
-该数据覆盖了美国本土，制作方法是：
-
-a) 从Landsat 获得1986 年到 2016 年的 30 m 分辨率16 天的 GPP 和年度 NPP；
-
-b) 从MODIS 获得 2001 年至 2016 年 250 m 分辨率的 8 天 GPP 和年度 NPP。
-
-c) 基于来自 FLUXNET2015 数据库的涡流协方差通量导出的GPP 数据。
-
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/img/202201261231895.png)
-
-如果需要下载该数据，进入网站：http://files.ntsg.umt.edu/data/Landsat_Productivity/，该网站以文件夹的形式进行了展示，可以直接下载：
+进入网站：http://files.ntsg.umt.edu/data/Landsat_Productivity/
 
 ![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20220124232512.png)
 
-*相关文献：**Robinson, N.P., B.W. Allred, W.K. Smith, M.O. Jones, A. Moreno, T.A. Erickson, D.E. Naugle, and S.W. Running. 2018. Terrestrial primary production for the conterminous United States derived from Landsat 30 m and MODIS 250 m. Remote Sensing in Ecology and Conservation*
+*参考：**Robinson, N.P., B.W. Allred, W.K. Smith, M.O. Jones, A. Moreno, T.A. Erickson, D.E. Naugle, and S.W. Running. 2018. Terrestrial primary production for the conterminous United States derived from Landsat 30 m and MODIS 250 m. Remote Sensing in Ecology and Conservation*
 
-## 中国2000-2010年 NPP （1km） 
+WAPOR Dekadal Net Primary Production
 
-中科院NPP数据覆盖时间为2000年-2010年，分辨率为1km：
+https://wapor.apps.fao.org/catalog/WAPOR_2/1/L1_NPP_D  
+
+
+
+非洲 NPP数据集 每十天 
+
+
+
+
+
+中科院NPP数据
+
+2000年-2010年
 
 ![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/img/202201241544716.png)
 
-下载方式是进入：https://www.resdc.cn/data.aspx?DATAID=204，点击下载即可：
+https://www.resdc.cn/data.aspx?DATAID=204
 
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/img/202201261233927.png)
+## 北纬18°以北中国陆地生态系统逐月净初级生产力1公里栅格数据集（1985-2015）
 
-## 
+http://www.geodoi.ac.cn/  全球变化科学研究数据
 
-## 中国1985-2015年 NPP（1KM）
 
-中科院陈鹏飞老师制作了了逐月净初级生产力的1公里栅格数据集（1985-2015），
-
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/img/202201261236992.png)
-
-下载方式为进入全球变化科学研究数据网站：http://www.geodoi.ac.cn/  ，搜索逐月净初级生产力：
-
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/img/202201261237200.png)
-
-点击进入，然后选择相应年份进行数据下载：
 
 ![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/img/202201241813168.png)
 
@@ -231,29 +151,7 @@ c) 基于来自 FLUXNET2015 数据库的涡流协方差通量导出的GPP 数据
 
 ![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/img/202201241813595.png)
 
-下载感兴趣的数据，选择相应的月份进行展示：
-
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/img/202201261217044.png)
-
-*相关文献：*
+*参考：*
 
 *陈鹏飞. 北纬18°以北中国陆地生态系统逐月净初级生产力1公里栅格数据集(1985-2015)[J]. 全球变化数据学报(中英文), 2019(1):16.*
-
-
-
-其他参考：
-
-MajorDifferences. Difference between Gross Primary Productivity and Net Primary Productivity
-
-王昭生. 1949-2008年东亚区域陆地生态系统NPP和GPP的时空格局演变[D]. 湖南科技大学, 2012.
-
-# 广告时间：
-
-最后打个广告，地信遥感数据汇（www.gisrsdata.com）网站目前已经上线第70天了，距离100天约定之期也快了。
-
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/img/202201261241334.png)
-
-但是数据下载教程还是不够全面，如果有想法写教程的可以与我联系：
-
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/img/202201261243639.jpg)
 
