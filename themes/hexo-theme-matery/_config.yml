@@ -314,13 +314,14 @@ postCalendar: true
 # the Gitalk config，default disabled
 # Gitalk 评论模块的配置，默认为不激活
 gitalk:
-  enable: false
-  owner:
-  repo:
+  enable: true
+  owner: ruiduobao 
+  repo: https://github.com/ruiduobao/ruiduobao.club
   oauth:
-    clientId:
-    clientSecret:
-  admin:
+    clientId:11bfd1dced5389d81b97
+    clientSecret:3dbb5373f5224747584fc2b42da45c7c2d5c7d25
+
+  admin: ['ruiduobao ']
 
 # the Gitment config，default disabled
 # Gitment 评论模块的配置，默认为不激活
@@ -329,8 +330,8 @@ gitment:
   owner:
   repo:
   oauth:
-    clientId:
-    clientSecret:
+    clientId:11bfd1dced5389d81b97
+    clientSecret:3dbb5373f5224747584fc2b42da45c7c2d5c7d25
 
 # disqus config, default disabled
 # Disqus评论模块的配置，默认为不激活
@@ -632,7 +633,7 @@ banner:
 
 #ICP备案信息尾部显示
 icp:
-  enable: false
+  enable: true
   url: https://beian.miit.gov.cn/#/Integrated/index
   text: 蜀ICP备2021024989号
 
