@@ -318,8 +318,8 @@ gitalk:
   owner: ruiduobao 
   repo: https://github.com/ruiduobao/ruiduobao.club
   oauth:
-    clientId:11bfd1dced5389d81b97
-    clientSecret:3dbb5373f5224747584fc2b42da45c7c2d5c7d25
+    clientId: 11bfd1dced5389d81b97
+    clientSecret: 3dbb5373f5224747584fc2b42da45c7c2d5c7d25
 
   admin: ['ruiduobao']
 
@@ -330,8 +330,8 @@ gitment:
   owner:
   repo:
   oauth:
-    clientId:11bfd1dced5389d81b97
-    clientSecret:3dbb5373f5224747584fc2b42da45c7c2d5c7d25
+    clientId: 11bfd1dced5389d81b97
+    clientSecret: 3dbb5373f5224747584fc2b42da45c7c2d5c7d25
 
 # disqus config, default disabled
 # Disqus评论模块的配置，默认为不激活
