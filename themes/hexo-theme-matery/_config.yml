@@ -315,12 +315,13 @@ postCalendar: true
 # Gitalk 评论模块的配置，默认为不激活
 gitalk:
   enable: true
-  oauth:
-    clientID: '11bfd1dced5389d81b97'
-    clientSecret: '3dbb5373f5224747584fc2b42da45c7c2d5c7d25'
   repo: 'ruiduobao.club' 
   owner: 'ruiduobao' 
   admin: ['ruiduobao'] 
+  oauth:
+    clientId: '901dd8f869619a4e628d'
+    clientSecret: 'c051a80e5e3d69ad7e42c327bdc9fd99fbc2d1b5'
+
   # // distractionFreeMode: true,
   # pagerDirection: 'last' # 'first'正序 | 'last'倒序
   # id: '<%- (frontmatter.permalink || frontmatter.to.path).slice(-16) %>' # 页面的唯一标识,长度不能超过50
@@ -335,8 +336,8 @@ gitment:
   owner:
   repo:
   oauth:
-    clientId: 11bfd1dced5389d81b97
-    clientSecret: 3dbb5373f5224747584fc2b42da45c7c2d5c7d25
+    clientId: 901dd8f869619a4e628d
+    clientSecret: c051a80e5e3d69ad7e42c327bdc9fd99fbc2d1b5
 
 # disqus config, default disabled
 # Disqus评论模块的配置，默认为不激活
