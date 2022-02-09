@@ -315,16 +315,16 @@ postCalendar: true
 # Gitalk 评论模块的配置，默认为不激活
 gitalk:
   enable: true
-  clientID: '11bfd1dced5389d81b97',
-  clientSecret: '3dbb5373f5224747584fc2b42da45c7c2d5c7d25',
-  repo: 'ruiduobao.club', # GitHub 仓库
-  owner: 'ruiduobao', # GitHub仓库所有者
-  admin: ['ruiduobao'], # 对仓库有写权限的人
+  clientID: '11bfd1dced5389d81b97'
+  clientSecret: '3dbb5373f5224747584fc2b42da45c7c2d5c7d25'
+  repo: 'ruiduobao.club' # GitHub 仓库
+  owner: 'ruiduobao' # GitHub仓库所有者
+  admin: ['ruiduobao'] # 对仓库有写权限的人
   # // distractionFreeMode: true,
-  pagerDirection: 'last', # 'first'正序 | 'last'倒序
-  id: '<%- (frontmatter.permalink || frontmatter.to.path).slice(-16) %>', # 页面的唯一标识,长度不能超过50
-  title: '「评论」<%- frontmatter.title %>', # GitHub issue 的标题
-  labels: ['Gitalk', 'Comment'], # GitHub issue 的标签
+  pagerDirection: 'last' # 'first'正序 | 'last'倒序
+  id: '<%- (frontmatter.permalink || frontmatter.to.path).slice(-16) %>' # 页面的唯一标识,长度不能超过50
+  title: '「评论」<%- frontmatter.title %>' # GitHub issue 的标题
+  labels: ['Gitalk', 'Comment'] # GitHub issue 的标签
   # body: '页面：<%- window.location.origin + (frontmatter.to.path || window.location.pathname) %>', # GitHub issue 的内容
 
 # the Gitment config，default disabled
