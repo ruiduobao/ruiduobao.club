@@ -633,7 +633,7 @@ banner:
 
 #ICP备案信息尾部显示
 icp:
-  enable: false
+  enable: true
   url: https://beian.miit.gov.cn/#/Integrated/index
   text: 蜀ICP备2021024989号
 
