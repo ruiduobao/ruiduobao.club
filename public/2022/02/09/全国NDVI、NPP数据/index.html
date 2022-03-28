@@ -483,7 +483,7 @@
 <p>计算公式：NDVI=(NIR-R)/(NIR+R)</p>
 <p>其中，NIR为卫星影像的近红外波段，R为卫星影像的红光波段。本数据拟采用30m分辨率的Landsat卫星。</p>
 <h2 id="数据制作流程"><a href="#数据制作流程" class="headerlink" title="数据制作流程"></a>数据制作流程</h2><p>本数据的制作流程主要分为四部分：</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20220110035529.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20220110035529.png"></p>
 <h3 id="数据云处理"><a href="#数据云处理" class="headerlink" title="数据云处理"></a>数据云处理</h3><p>考虑到landsat卫星的数据为30m分辨率，而需要计算全国区域的NDVI最大值合成数据，计算量特别巨大。因此使用遥感云计算GEE（Google earth engine）处理获取全国各大区域的年NDVI最大值合成数据。在使用GEE处理landsat数据时，会将中国区域分为几个部分进行处理与下载。</p>
 <h3 id="本地镶嵌数据"><a href="#本地镶嵌数据" class="headerlink" title="本地镶嵌数据"></a>本地镶嵌数据</h3><p>将GEE处理获得的全国NDVI数据，使用GDAL进行镶嵌，获得一张全国30m分辨率的NDVI数据集。</p>
 <h3 id="制作产品数据"><a href="#制作产品数据" class="headerlink" title="制作产品数据"></a>制作产品数据</h3><p>在本地使用gdal获得分级别（全国、省、市、县）的NDVI数据。</p>
@@ -503,7 +503,7 @@
 <p>2020年全国降尺度的30m分辨率气象数据（温度、降水）</p>
 <p>2020年全国降尺度的30m分辨率太阳总辐射数据、</p>
 <p>近年全国植被类型数据等。</p>
-<h2 id="数据制作流程-1"><a href="#数据制作流程-1" class="headerlink" title="数据制作流程"></a>数据制作流程</h2><p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20220110043349.png"></p>
+<h2 id="数据制作流程-1"><a href="#数据制作流程-1" class="headerlink" title="数据制作流程"></a>数据制作流程</h2><p><img src="http://pics.landcover100.com/pics//image/20220110043349.png"></p>
 <p>制作的数据来源包括气象统计数据、辐射数据、植被覆盖数据、landsat的NDVI数据。</p>
 <p>NDVI一共12期，考虑到landsat时间分辨率低，拟采使用同期哨兵数据或者往年平均值代替缺失值。</p>
 <p>气象数据通过气象网站上的数据进行全国插值并进行降尺度获得。</p>

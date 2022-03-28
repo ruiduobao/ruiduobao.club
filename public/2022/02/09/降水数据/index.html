@@ -479,68 +479,68 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="1901年-2020年全球气象数据CRU-TS-介绍、下载与使用教程"><a href="#1901年-2020年全球气象数据CRU-TS-介绍、下载与使用教程" class="headerlink" title="1901年-2020年全球气象数据CRU TS 介绍、下载与使用教程"></a>1901年-2020年全球气象数据<strong>CRU TS</strong> 介绍、下载与使用教程</h1><h1 id="数据介绍"><a href="#数据介绍" class="headerlink" title="数据介绍"></a>数据介绍</h1><p>CRU TS 是目前使用最广泛的气候数据集之一，由英国国家大气科学中心 (NCAS) 制作。CRU TS 提供全球1901 年至 2020 年覆盖陆地表面的 0.5° 分辨率的月度数据。该数据集拥有基于近地表测量的10 套数据，分别是：温度（平均值、最小值、最大值和昼夜温差）、降水量（总量，雨天数）、湿度（如蒸气压）、霜天数、云量和潜在的蒸腾作用。</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211221211829.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211221211829.png"></p>
 <p>对于该数据的制作方法该兴趣的可以阅读论文，DOI：<a target="_blank" rel="noopener" href="https://doi.org/10.1038/s41597-020-0453-3%EF%BC%8C%E5%8F%91%E8%A1%A8%E5%9C%A8Nature&#39;s">https://doi.org/10.1038/s41597-020-0453-3，发表在Nature&#39;s</a> Scientific Data上。</p>
 <h1 id="数据下载"><a href="#数据下载" class="headerlink" title="数据下载"></a>数据下载</h1><p>CRU TS官网官网提供的数据包含各个版本，目前该数据集已更新到Version 4。这里仅展示如何<strong>下载2020年</strong>的降水数据。</p>
 <p>进入CRU TS官网（<a target="_blank" rel="noopener" href="https://crudata.uea.ac.uk/cru/data/hrg/%EF%BC%89%EF%BC%8C%E5%B9%B6%E7%82%B9%E5%87%BB**local">https://crudata.uea.ac.uk/cru/data/hrg/），并点击**local</a> copy**</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211221212933.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211221212933.png"></p>
 <p>点击Main gridded data下载数据：</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211221213244.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211221213244.png"></p>
 <p>点击pre下载降水数据：</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211221213443.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211221213443.png"></p>
 <p>该网页界面各个单词代表的含义如下表，如果你需要下载温度、云量、霜天数等，找到对应的数据下载</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211221214249.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211221214249.png"></p>
 <p>点击pre之后，我们选择最新的nc数据集，该数据集包含全球2011年-2020年的降水数据：</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211221214507.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211221214507.png"></p>
 <p>点击下载，速度较慢耐心等待。到此数据下载完毕：</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211221214837.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211221214837.png"></p>
 <h1 id="数据使用"><a href="#数据使用" class="headerlink" title="数据使用"></a>数据使用</h1><p>通过数据下载，我们获得了2011年-2020年的全球降水数据，分辨率为0.5°。</p>
 <p>我们以降水数据举例，使用arcgis制作2020年四川省的年降水量地图。</p>
 <p>下面是具体步骤</p>
 <p><strong>1.加载影像、裁剪影像、投影</strong></p>
 <p>通过arcgis自带的nc文件打开工具打开降水数据</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211221221324.png"></p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211221221517.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211221221324.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211221221517.png"></p>
 <p>将四川省与降水数据进行加载</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211221221610.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211221221610.png"></p>
 <p>使用裁剪工具，裁剪四川省周围数据框的数据，由于后面步骤中会进行插值，<strong>裁剪四川省附近范围</strong>，可以使用数据导出功能中的<strong>导出数据框</strong>：</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211221222320.png"></p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211221222251.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211221222320.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211221222251.png"></p>
 <p>将导出的数据加载进arcgis中：</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211221222419.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211221222419.png"></p>
 <p>此时的降水数据是没有投影的，添加投影</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211221222911.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211221222911.png"></p>
 <p>根据四川省的中央经线计算，将数据库的投影改为WGS_1984_UTM_Zone_48N：</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211221223303.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211221223303.png"></p>
 <p>可以看到转换投影后的显示效果</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211221223407.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211221223407.png"></p>
 <p>使用栅格导出工具，赋予降水数据投影</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211221223521.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211221223521.png"></p>
 <p>此时我们打开栅格数据，就有影像栅格大小了。</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211221224330.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211221224330.png"></p>
 <p><strong>2.获得2020年平均降水</strong></p>
 <p>该数据集包括2011年-2020年，共计10年的降水数据，120个波段。2020年的数据波段序列为109-120：</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211221225126.png"></p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211221225408.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211221225126.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211221225408.png"></p>
 <p>加载这些波段到arcgis中，使用像元统计工具，获得每一个栅格点的年降水量：</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211221230129.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211221230129.png"></p>
 <p>获得基于每个栅格的年降水量：</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211221230337.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211221230337.png"></p>
 <p><strong>3.制作栅格的格网点</strong></p>
 <p>该数据是基于栅格的降水量，我们像获得更高分辨率的数据，可以使用插值的方法。使用插值前，使用栅格转点工具获得像素点：</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211221230515.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211221230515.png"></p>
 <p>因为插值是会看周围点的值，我这里其实选择的栅格数据范围小了，读者在使用时尽量将栅格数据往外扩展多几个格点</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211221231034.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211221231034.png"></p>
 <p><strong>4.格网点插值</strong></p>
 <p>根据需要选择栅格分辨率，这里设置的是90m分辨率</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211221230804.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211221230804.png"></p>
 <p>分辨率越高，速度越慢，耐心等待</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211221230919.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211221230919.png"></p>
 <p>此时我就获得了四川省2020年的年度降水分布图</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211221231249.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211221231249.png"></p>
 <p><strong>5.制图</strong></p>
 <p>制图就根据自己的数据按照要求出图：</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211221234653.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211221234653.png"></p>
 
                 
             </div>

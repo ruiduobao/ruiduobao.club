@@ -558,40 +558,40 @@ Wate">
 </tr>
 </tbody></table>
 <p>该数据集的具体的分类效果如下：</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211204213847.png"></p>
-<p>该数据的数据精度总体精度为**85%**，混淆矩阵如下所示:<br><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211204205244.png"><br>Esri全球土地覆盖数据的影像数据的分布如下所示:<br><img src="https://img-blog.csdnimg.cn/f5bcb3a2da6146c594e34804d471e97c.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6ZSQ5aSa5a6d55qE5Zyw55CG56m66Ze0,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211204213847.png"></p>
+<p>该数据的数据精度总体精度为**85%**，混淆矩阵如下所示:<br><img src="http://pics.landcover100.com/pics//image/20211204205244.png"><br>Esri全球土地覆盖数据的影像数据的分布如下所示:<br><img src="https://img-blog.csdnimg.cn/f5bcb3a2da6146c594e34804d471e97c.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6ZSQ5aSa5a6d55qE5Zyw55CG56m66Ze0,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
 <h2 id="2-下载教程"><a href="#2-下载教程" class="headerlink" title="2.下载教程"></a>2.下载教程</h2><h3 id="2-1-官网下载"><a href="#2-1-官网下载" class="headerlink" title="2.1 官网下载"></a>2.1 官网下载</h3><p>首先进入官网，会弹出一个下载窗口：</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211204205510.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211204205510.png"></p>
 <p>点击链接，即可下载全球的影像。如果你只想下载特定区域的数据，缩放到研究区。例如我们要下载北京市的土地覆盖数据，</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211204205909.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211204205909.png"></p>
 <p>鼠标左键点击，会弹出一个下载框：</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211204210002.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211204210002.png"></p>
 <p>再次点击进行下载，会自动跳转下载文件。待下载完成后，在gis软件中打开。</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211204210210.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211204210210.png"></p>
 <p>该数据是自带颜色映射表，无需手动配色。如果数据没有完整覆盖研究区，多下载两景。再按照研究区进行镶嵌和裁剪。</p>
 <h3 id="2-2-GEE下载"><a href="#2-2-GEE下载" class="headerlink" title="2.2 GEE下载"></a>2.2 GEE下载</h3><p>ESRI数据目前已经共享在Google earth engine平台上。但是ESRI数据在GEE中并没有拼接，需要mosaic。</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211204212324.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211204212324.png"></p>
 <p>第一步是设置参数，并加载ESRI的数据。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//显示参数设置</span></span><br><span class="line"><span class="keyword">var</span> imageVisParam_ESRI = &#123;<span class="string">&quot;opacity&quot;</span>:<span class="number">1</span>,<span class="string">&quot;bands&quot;</span>:[<span class="string">&quot;b1&quot;</span>],<span class="string">&quot;min&quot;</span>:<span class="number">1</span>,<span class="string">&quot;max&quot;</span>:<span class="number">10</span>,<span class="string">&quot;palette&quot;</span>:[<span class="string">&quot;8dffda&quot;</span>,<span class="string">&quot;14ff31&quot;</span>,<span class="string">&quot;686dff&quot;</span>,<span class="string">&quot;ff9b54&quot;</span>,<span class="string">&quot;ff712d&quot;</span>,<span class="string">&quot;ff66b4&quot;</span>]&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//浏览全球土地覆盖数据</span></span><br><span class="line"><span class="keyword">var</span> <span class="variable constant_">ESRI</span> = ee.<span class="title class_">ImageCollection</span>(<span class="string">&quot;projects/sat-io/open-datasets/landcover/ESRI_Global-LULC_10m&quot;</span>)</span><br><span class="line"><span class="title class_">Map</span>.<span class="title function_">addLayer</span>(<span class="variable constant_">ESRI</span>,imageVisParam_ESRI,<span class="string">&quot;ESRI_landcover&quot;</span>)</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211204212613.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211204212613.png"></p>
 <p>第二步加载待下载区域ROI。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//导入研究区</span></span><br><span class="line"><span class="keyword">var</span> <span class="variable constant_">ROI</span>  =  ee.<span class="title class_">FeatureCollection</span>(<span class="string">&quot;users/kitmyfaceplease2/lezhixian&quot;</span>).<span class="title function_">geometry</span>()</span><br><span class="line"><span class="title class_">Map</span>.<span class="title function_">centerObject</span>(<span class="variable constant_">ROI</span>, <span class="number">8</span>)</span><br><span class="line"><span class="title class_">Map</span>.<span class="title function_">addLayer</span>(<span class="variable constant_">ROI</span>, &#123;<span class="attr">color</span>: <span class="string">&#x27;FF0000&#x27;</span>, <span class="attr">fillColor</span>: <span class="string">&#x27;00000000&#x27;</span>, <span class="attr">width</span>: <span class="number">1</span>&#125;, <span class="string">&quot;ROI&quot;</span>)</span><br></pre></td></tr></table></figure>
 
 <p>第三步是筛选影像，并裁剪:<br>ESRI数据需要使用<strong>mosaic</strong>函数。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//筛选数据             </span></span><br><span class="line"><span class="keyword">var</span> ESRI_ROI_landcover=<span class="variable constant_">ESRI</span></span><br><span class="line">              .<span class="title function_">filterBounds</span>(<span class="variable constant_">ROI</span>)</span><br><span class="line">              .<span class="title function_">mosaic</span>()</span><br><span class="line">              .<span class="title function_">clip</span>(<span class="variable constant_">ROI</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">//研究区土地覆盖影像</span></span><br><span class="line"><span class="title class_">Map</span>.<span class="title function_">addLayer</span>(ESRI_ROI_landcover,imageVisParam_ESRI,<span class="string">&quot;ESRI_ROI_landcover&quot;</span>)</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211204212643.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211204212643.png"></p>
 <p>第三步是导出影像:</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//下载</span></span><br><span class="line"><span class="title class_">Export</span>.<span class="property">image</span>.<span class="title function_">toDrive</span>(&#123;</span><br><span class="line">    <span class="attr">image</span>:ESRI_ROI_landcover,</span><br><span class="line">    <span class="attr">description</span>: <span class="string">&quot;ESRI_ROI_landcover&quot;</span>,</span><br><span class="line">    <span class="attr">region</span>:<span class="variable constant_">ROI</span>,</span><br><span class="line">    <span class="attr">scale</span>:<span class="number">10</span>,</span><br><span class="line">    <span class="attr">maxPixels</span>:<span class="number">1e13</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211204212659.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211204212659.png"></p>
 <p>GEE代码链接：</p>
 <p><a target="_blank" rel="noopener" href="https://code.earthengine.google.com/a38ccac06dcc858b83a65b01b3427819">https://code.earthengine.google.com/a38ccac06dcc858b83a65b01b3427819</a></p>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>Karra, Kontgis, et al. “Global land use/land cover with Sentinel-2 and deep learning.” IGARSS 2021-2021 IEEE International Geoscience and Remote Sensing Symposium. IEEE, 2021.</p>
 <p><a target="_blank" rel="noopener" href="https://esri.maps.arcgis.com/apps/instant/media/index.html?appid=fc92d38533d440078f17678ebc20e8e2">https://esri.maps.arcgis.com/apps/instant/media/index.html?appid=fc92d38533d440078f17678ebc20e8e2</a></p>
 <p>PIE&amp;GEE 下载ESA、Esri与FROM三款10米土地覆盖数据代码.<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/424767735">https://zhuanlan.zhihu.com/p/424767735</a></p>
-<h2 id="作者信息"><a href="#作者信息" class="headerlink" title="作者信息"></a>作者信息</h2><p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211128044430.png"></p>
+<h2 id="作者信息"><a href="#作者信息" class="headerlink" title="作者信息"></a>作者信息</h2><p><img src="http://pics.landcover100.com/pics//image/20211128044430.png"></p>
 
                 
             </div>

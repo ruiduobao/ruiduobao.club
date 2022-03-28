@@ -14,7 +14,7 @@
 
 本数据的制作流程主要分为四部分：
 
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20220110035529.png)
+![](http://pics.landcover100.com/pics//image/20220110035529.png)
 
 ### 数据云处理
 
@@ -72,7 +72,7 @@ NPP(x,t)=ε(x,t)×APAR(x,t)
 
 ## 数据制作流程
 
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20220110043349.png)
+![](http://pics.landcover100.com/pics//image/20220110043349.png)
 
 制作的数据来源包括气象统计数据、辐射数据、植被覆盖数据、landsat的NDVI数据。
 

@@ -483,12 +483,12 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="1-背景介绍"><a href="#1-背景介绍" class="headerlink" title="1.背景介绍"></a>1.背景介绍</h1><p>在北京的朋友可能感觉到了，北京貌似整个夏天一直在下雨。偶然间我看到这样的一个新闻:</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20210918015302.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20210918015302.png"></p>
 <p>这就激起了我的兴趣了，我想用遥感看看这几年密云水库是如何变化的。</p>
 <h1 id="2-工具与数据"><a href="#2-工具与数据" class="headerlink" title="2.工具与数据"></a>2.工具与数据</h1><p>工具:<strong>Google Earth Engine</strong></p>
 <p>数据:<strong>Sentinel-2 MSI Level 1C</strong></p>
 <p>时间:<strong>2015年9月—2021年9月</strong></p>
-<h1 id="3-研究方法"><a href="#3-研究方法" class="headerlink" title="3.研究方法"></a>3.研究方法</h1><p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20210918015211.png"></p>
+<h1 id="3-研究方法"><a href="#3-研究方法" class="headerlink" title="3.研究方法"></a>3.研究方法</h1><p><img src="http://pics.landcover100.com/pics//image/20210918015211.png"></p>
 <h1 id="4-方法实现"><a href="#4-方法实现" class="headerlink" title="4.方法实现"></a>4.方法实现</h1><p><strong>数据筛选</strong>:</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//时间</span></span><br><span class="line"><span class="keyword">var</span> startDate = ee.<span class="title class_">Date</span>(<span class="string">&#x27;2015-9-1&#x27;</span>); </span><br><span class="line"><span class="keyword">var</span> endDate = ee.<span class="title class_">Date</span>(<span class="string">&#x27;2021-9-30&#x27;</span>); </span><br><span class="line"><span class="comment">//筛选</span></span><br><span class="line"><span class="keyword">var</span> sentinelcollection = <span class="variable constant_">SENTINEL</span></span><br><span class="line">                  .<span class="title function_">filterDate</span>(startDate, endDate)<span class="comment">//时间过滤</span></span><br><span class="line">                  .<span class="title function_">filterBounds</span>(roi)<span class="comment">//位置过滤</span></span><br><span class="line">                  .<span class="title function_">filterMetadata</span>(<span class="string">&quot;MGRS_TILE&quot;</span>, <span class="string">&quot;equals&quot;</span>, <span class="string">&quot;50TMK&quot;</span>)<span class="comment">//条带号过滤</span></span><br><span class="line">                  .<span class="title function_">filter</span>(ee.<span class="property">Filter</span>.<span class="title function_">lte</span>(<span class="string">&#x27;CLOUDY_PIXEL_PERCENTAGE&#x27;</span>,<span class="number">5</span>))<span class="comment">//云量过滤</span></span><br></pre></td></tr></table></figure>
 
@@ -506,8 +506,8 @@
 
 <p><strong>链接:</strong><br><a target="_blank" rel="noopener" href="https://code.earthengine.google.com/5993bea8a031d03ad353d38a36c7dc07">完整代码链接:</a><br><a target="_blank" rel="noopener" href="https://code.earthengine.google.com/5993bea8a031d03ad353d38a36c7dc07">https://code.earthengine.google.com/5993bea8a031d03ad353d38a36c7dc07</a></p>
 <p>打开链接，直接在Google earth中运行。如果你需要换成其他区域，该代码只需要在筛选中去掉“条带号”的指定语句。</p>
-<h1 id="​5-图像对比图"><a href="#​5-图像对比图" class="headerlink" title="​5.图像对比图"></a>​5.图像对比图</h1><p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20210918015107.png"><br>2020年9月9日密云水库的水体分布图</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20210918015039.png"><br>2021年9月9日密云水库的水体分布图</p>
+<h1 id="​5-图像对比图"><a href="#​5-图像对比图" class="headerlink" title="​5.图像对比图"></a>​5.图像对比图</h1><p><img src="http://pics.landcover100.com/pics//image/20210918015107.png"><br>2020年9月9日密云水库的水体分布图</p>
+<p><img src="http://pics.landcover100.com/pics//image/20210918015039.png"><br>2021年9月9日密云水库的水体分布图</p>
 
                 
             </div>

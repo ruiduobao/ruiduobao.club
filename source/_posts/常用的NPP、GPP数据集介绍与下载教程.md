@@ -43,7 +43,7 @@ MOD17A3	MYD17A2 全球 modis
 
 通过EC-LUE 模型生成的0.05 ∘纬度×0.05 ∘经度和8 d天间隔的长期全球GPP 数据集
 
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20220125000124.png)
+![](http://pics.landcover100.com/pics//image/20220125000124.png)
 
 https://essd.copernicus.org/articles/12/2725/2020/
 
@@ -67,7 +67,7 @@ https://essd.copernicus.org/articles/12/2725/2020/
 
 ## A global moderate resolution dataset of gross primary production of vegetation for 2000–2016
 
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20220125001753.png)
+![](http://pics.landcover100.com/pics//image/20220125001753.png)
 
 该数据集包含来自植被光合作用模型 (VPM) 的 GPP，具有两个空间分辨率（0.05 和 0.5 度）和三个时间分辨率（8 天、每月、每年）
 
@@ -97,7 +97,7 @@ https://www.fao.org/nr/climpag/globgrids/npp_en.asp
 
 美国 250m 2000-2019年  每日GPP数据
 
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/微信截图_20220124225839.jpg)
+![](http://pics.landcover100.com/pics//image/微信截图_20220124225839.jpg)
 
 https://essd.copernicus.org/articles/13/281/2021/
 
@@ -115,7 +115,7 @@ https://essd.copernicus.org/articles/13/281/2021/
 
 进入网站：http://files.ntsg.umt.edu/data/Landsat_Productivity/
 
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20220124232512.png)
+![](http://pics.landcover100.com/pics//image/20220124232512.png)
 
 *参考：**Robinson, N.P., B.W. Allred, W.K. Smith, M.O. Jones, A. Moreno, T.A. Erickson, D.E. Naugle, and S.W. Running. 2018. Terrestrial primary production for the conterminous United States derived from Landsat 30 m and MODIS 250 m. Remote Sensing in Ecology and Conservation*
 

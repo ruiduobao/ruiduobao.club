@@ -5,11 +5,11 @@
 
 # 1.下载方式
 登录Zenodo官网(https://zenodo.org),搜索 ESA WorldCover 10 m:
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211021135911.png)
+![](http://pics.landcover100.com/pics//image/20211021135911.png)
 进入搜索结果,点击下载链接，下载数据:
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211021140013.png)
+![](http://pics.landcover100.com/pics//image/20211021140013.png)
 由于该数据特别大，并且不支持断点续传，这里建议使用IDM下载器进行下载:
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211021140126.png)
+![](http://pics.landcover100.com/pics//image/20211021140126.png)
 待数据下载完之后，我对其进行了解压，并上传百度云，有需要的可以选择对应的行列号进行下载:
 
 

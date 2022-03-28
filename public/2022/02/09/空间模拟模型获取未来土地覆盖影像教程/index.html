@@ -482,63 +482,63 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="空间模拟模型获取未来土地覆盖教程"><a href="#空间模拟模型获取未来土地覆盖教程" class="headerlink" title="空间模拟模型获取未来土地覆盖教程"></a>空间模拟模型获取未来土地覆盖教程</h1><h1 id="缘起"><a href="#缘起" class="headerlink" title="缘起"></a>缘起</h1><p>我这几天翻自己以前的博客，翻到了这一篇：</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/1a9037d00eee05463aee63c9a6ae1e6.jpg"></p>
+<p><img src="http://pics.landcover100.com/pics//image/1a9037d00eee05463aee63c9a6ae1e6.jpg"></p>
 <p>当时不求甚解，没有深入的探索，直到我看到了YouTube有一位up主发了空间预测模拟的教程（参考网址中），因此激起了我的兴趣。</p>
-<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>空间预测模型具有空间模拟的优势，反映位置变化信息，预测空间格局的分布变化，能够模拟复杂系统的时空演变过程这类模型主要用于确定土地利用／土地覆盖变化的模式和过程，并预测未来变化的位置。<br><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211226023737.png" style="zoom:33%;" /><br>该类模型是在时间、空间和状态上离散的网格动态模型，能够从经验数据推导出土地利用／覆盖变化的过渡规则，可以在复杂和动态的环境中完成一系列任务，并且可以适应和感知环境的变化，这些特征被广泛用于模拟不同活动之间的相互作用。空间预测模型的相关原理可以参考：<br><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211226023514.png" style="zoom: 33%;" /></p>
-<h1 id="技术路线"><a href="#技术路线" class="headerlink" title="技术路线"></a>技术路线</h1><p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211226182137.png"></p>
+<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>空间预测模型具有空间模拟的优势，反映位置变化信息，预测空间格局的分布变化，能够模拟复杂系统的时空演变过程这类模型主要用于确定土地利用／土地覆盖变化的模式和过程，并预测未来变化的位置。<br><img src="http://pics.landcover100.com/pics//image/20211226023737.png" style="zoom:33%;" /><br>该类模型是在时间、空间和状态上离散的网格动态模型，能够从经验数据推导出土地利用／覆盖变化的过渡规则，可以在复杂和动态的环境中完成一系列任务，并且可以适应和感知环境的变化，这些特征被广泛用于模拟不同活动之间的相互作用。空间预测模型的相关原理可以参考：<br><img src="http://pics.landcover100.com/pics//image/20211226023514.png" style="zoom: 33%;" /></p>
+<h1 id="技术路线"><a href="#技术路线" class="headerlink" title="技术路线"></a>技术路线</h1><p><img src="http://pics.landcover100.com/pics//image/20211226182137.png"></p>
 <h1 id="操作流程"><a href="#操作流程" class="headerlink" title="操作流程"></a>操作流程</h1><h2 id="影像预处理"><a href="#影像预处理" class="headerlink" title="影像预处理"></a>影像预处理</h2><h3 id="数据准备"><a href="#数据准备" class="headerlink" title="数据准备"></a>数据准备</h3><p>进行土地覆盖数据的空间模型预测需准备多年的土地覆盖数据，道路数据和DEM数据。</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211226183110.png"></p>
-<p>选取的研究区为四川省资阳市乐至县（怎么<strong>又是这？</strong>因为乐至县是我老家，哈哈）。<br><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211226183853.png" style="zoom:33%;" /><br>DEM数据为30m分辨率的NASA DEM，道路数据选取的是2020年open street map的道路矢量。土地覆盖数据是2009年、2014年、2019年的武汉大学数据集。</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211226192308.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211226183110.png"></p>
+<p>选取的研究区为四川省资阳市乐至县（怎么<strong>又是这？</strong>因为乐至县是我老家，哈哈）。<br><img src="http://pics.landcover100.com/pics//image/20211226183853.png" style="zoom:33%;" /><br>DEM数据为30m分辨率的NASA DEM，道路数据选取的是2020年open street map的道路矢量。土地覆盖数据是2009年、2014年、2019年的武汉大学数据集。</p>
+<p><img src="http://pics.landcover100.com/pics//image/20211226192308.png"></p>
 <p>影像因子不仅可以包括交通距离、dem，你也可以添加土壤数据、气象数据等。这里为了展示，不深入研究。</p>
 <p>研究目的是通过2009年和2014年的乐至县土地覆盖数据训练空间预测模型，获得2019年的乐至县<strong>预测土地覆盖影像</strong>，并对结果进行评价。</p>
 <h3 id="投影与分辨率处理"><a href="#投影与分辨率处理" class="headerlink" title="投影与分辨率处理"></a>投影与分辨率处理</h3><h4 id="栅格数据处理"><a href="#栅格数据处理" class="headerlink" title="栅格数据处理"></a>栅格数据处理</h4><p>使用GCS_WGS_1984地理坐标系与WGS_1984_UTM_Zone_48N投影坐标系，对所有数据进行坐标系转换与重新投影：</p>
 <p>栅格数据的投影转换使用导出功能中附带的数据框，并将分辨率设置为30m：</p>
-<img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211226184510.png" style="zoom: 80%;" />
+<img src="http://pics.landcover100.com/pics//image/20211226184510.png" style="zoom: 80%;" />
 
 
 
 <h4 id="矢量数据的处理："><a href="#矢量数据的处理：" class="headerlink" title="矢量数据的处理："></a>矢量数据的处理：</h4><p>矢量数据的转换使用投影功能</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211226184357.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211226184357.png"></p>
 <p>道路数据做完投影之后，需计算交通距离图，即计算在乐至县内的每一个像素点到最近道路的距离。这里需使用欧氏距离计算工具：</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211226185153.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211226185153.png"></p>
 <p>需要注意分辨率设置为30m：</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211226185211.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211226185211.png"></p>
 <p>并在环境工具中设置空间处理范围为乐至县：</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211226185502.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211226185502.png"></p>
 <p>为防止出现bug，需要在环境设置中将并行处理因素设置为0：</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211226185554.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211226185554.png"></p>
 <p>点击运行，获得交通距离栅格图：</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211226185659.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211226185659.png"></p>
 <h3 id="数据裁剪与像元对齐"><a href="#数据裁剪与像元对齐" class="headerlink" title="数据裁剪与像元对齐"></a>数据裁剪与像元对齐</h3><p>使用栅格裁剪工具（数据管理-栅格-栅格处理-裁剪），<strong>不要选</strong>掩膜提取：</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211226185935.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211226185935.png"></p>
 <p>对2009年土地覆盖、2014年土地覆盖影像、dem影像和交通距离影像进行裁剪</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211226190102.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211226190102.png"></p>
 <p>为保证各个数据的像元个数相同并实现像元对齐，裁剪时必须勾选上<strong>裁剪几何和保持裁剪范围</strong>。这时打开所有影像的属性，这时输入数据都为相同行列号和分辨率。</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211226190404.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211226190404.png"></p>
 <h2 id="空间模拟"><a href="#空间模拟" class="headerlink" title="空间模拟"></a>空间模拟</h2><h3 id="工具介绍"><a href="#工具介绍" class="headerlink" title="工具介绍"></a>工具介绍</h3><p><strong>MOLUSCE</strong>，Methods Of Land Use Chande Evaluation，是一个用于土地利用变化评估的 QGIS 插件,主要有以下功能：</p>
 <ul>
 <li>获取时间段 A（过去）的土地利用类别栅格、时间段 B（现在）的土地利用类别栅格以及解释变量的栅格。</li>
 <li>训练一个模型来预测从过去到现在的土地利用变化。</li>
 <li>使用派生模型、土地利用现状和当前因素预测未来土地利用变化。</li>
 </ul>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211226191305.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211226191305.png"></p>
 <h3 id="模型训练"><a href="#模型训练" class="headerlink" title="模型训练"></a>模型训练</h3><p>安装qgis（需要降级到2系列版本，不要使用3版本），在插件中心安装该插件。</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211226191745.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211226191745.png"></p>
 <p>添加土地覆盖数据以及空间影响要素，</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211226191459.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211226191459.png"></p>
 <p>点击检查几何。检查几何最主要是对比数据的坐标系、分辨率、像素对齐这三个内容，一定要按照我上面的数据处理预处理步骤，这一步才能通过检查。如果没有问题才能进入下一步预测。</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211226191847.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211226191847.png"></p>
 <p>选中check all raster，并计算各个影像因子相关系数，算法的选择可以随意，我这里选的算法是皮尔逊积矩相关系数：</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211226192123.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211226192123.png"></p>
 <p>再进入下一步，计算乐至县2009年到2014年的土地变化矩阵，变化影像需要导出：</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211226192707.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211226192707.png"></p>
 <p>完成上诉步骤，即可开始训练模型：<br><img src="https://img-blog.csdnimg.cn/4aaf5f0cb95f46fa844170816973b818.gif" alt="请添加图片描述"></p>
-<h3 id="模型预测"><a href="#模型预测" class="headerlink" title="模型预测"></a>模型预测</h3><p>待数据训练完毕后，即可模拟预测影像：<br><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211226193758.png"></p>
+<h3 id="模型预测"><a href="#模型预测" class="headerlink" title="模型预测"></a>模型预测</h3><p>待数据训练完毕后，即可模拟预测影像：<br><img src="http://pics.landcover100.com/pics//image/20211226193758.png"></p>
 <p>这个模拟过程耗时较长，耐心等待：</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211226193935.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211226193935.png"></p>
 <h3 id="精度评价"><a href="#精度评价" class="headerlink" title="精度评价"></a>精度评价</h3><p>待预测完毕后，即可使用工具进行精度评价：</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211226194135.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20211226194135.png"></p>
 <h1 id="操作视频"><a href="#操作视频" class="headerlink" title="操作视频"></a>操作视频</h1><p>分为两部分影像预处理与空间模拟，由于我的耳机麦有杂音，我就不做相关语言介绍：</p>
 <p>预处理的视频如下：</p>
 <p>空间模拟的视频如下：</p>

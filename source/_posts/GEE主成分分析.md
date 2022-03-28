@@ -4,11 +4,11 @@
 
 # 1.介绍
 主成分分析是将众多具有相关性的数据指标，重新组合成一组新的指标,新形成的指标互不相关，并且前几个主成分能代表原始数据的大部分信息。
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211010042813.png)
+![](http://pics.landcover100.com/pics//image/20211010042813.png)
 在GEE中，可能会遇到波段数非常多的情况，这时就可以考虑使用主成分分析法只生成两、三个主成分，减少后续工作量。
 
 # 2.代码思路
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211010033224.png)
+![](http://pics.landcover100.com/pics//image/20211010033224.png)
 
 # 3.实操
 ## 3.1 数据筛选与预处理
@@ -27,7 +27,7 @@ var sentImage = sentmosaic.clip(LeZhiXian);
 //加载研究区影像图层
 Map.addLayer(sentImage, trueColor, "乐至县真彩色");
 ```
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211010034245.png)
+![](http://pics.landcover100.com/pics//image/20211010034245.png)
 
 ## 3.2 数据筛选与预处理
 选择需要进行主成分分析的原始影像波段，并且设置主成分分析影像的分辨率等。在进行主成分分析之前，进行预处理（协方差缩减等）。
@@ -115,10 +115,10 @@ var pcImage = getPrincipalComponents(centered, scale, region);
 // 主要成分可视化
 Map.addLayer(pcImage, {bands: ['pc3', 'pc2', 'pc1'], min: -2, max: 2}, 'Sentinel 2 - PCA');
 ```
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211010035733.png)
+![](http://pics.landcover100.com/pics//image/20211010035733.png)
 ## 3.4 数据导出
 选择需要导出的主成分波段，这里导出的是前三个波段，因为前三个波段累计贡献率超过95%，完全够用了。
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211010035934.png)
+![](http://pics.landcover100.com/pics//image/20211010035934.png)
 ```javascript
 //选择导出的波段
 var pcImage_output =pcImage.select(['pc1', 'pc2', 'pc3'])
@@ -133,7 +133,7 @@ Export.image.toDrive({
 });
 ```
 点击Run进行数据下载，一个县的研究区大概10分钟就能得到预期影像。
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211010040130.png)
+![](http://pics.landcover100.com/pics//image/20211010040130.png)
 将下载的影像，导入到arcgis或envi中，进行你所需要的分析。
 这里稍微提一下，在深度学习中，也可以用主成分分析法处理多波段影像，获得三个波段，用于训练与预测。
 

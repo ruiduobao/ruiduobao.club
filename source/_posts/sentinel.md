@@ -48,13 +48,13 @@
 
 Sentinel-1 任务包括由两颗极轨卫星Sentinel-1A与Sentinel-1B组成星座，昼夜运行，执行 C 波段合成孔径雷达成像。可供用户使用的 Level-0、Level-1 和 Level-2 数据产品。
 
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/539dbcffaf225c42d0a6ba5eb06e99e.png)
+![](http://pics.landcover100.com/pics//image/539dbcffaf225c42d0a6ba5eb06e99e.png)
 
 ## 传感器
 
 SENTINEL-1 携带一台 C-SAR传感器，工作在 5.405 GHz 的中心频率。它包括一个右视有源相控阵天线，支持快速的仰角和方位角扫描。C-SAR传感器在双极化（HH + HV，VV + VH）通过一个发射链（可切换到H或V）和两个平行的支撑件来实现操作接收对H和V偏振链。双极化数据可用于土地覆盖分类和海冰应用。
 
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211217053343.png)
+![](http://pics.landcover100.com/pics//image/20211217053343.png)
 
 Sentinel-1拥有四种采集模式：
 
@@ -65,7 +65,7 @@ Sentinel-1拥有四种采集模式：
 
 ### **带状图(SM)模式**:
 
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211217054305.png)
+![](http://pics.landcover100.com/pics//image/20211217054305.png)
 
  该模式窄幅宽度为80 公里，提供 5 m x 5 m 分辨率影像。Sentinel-1通过改变光束入射角和仰角光束宽度，用户可以选择六个成像条带之一。
 
@@ -73,7 +73,7 @@ Sentinel-1拥有四种采集模式：
 
  该模式是Sentinel-1在陆地上的默认采集模式，窄幅宽度为250 公里，提供 5 m x 20 m 分辨率影像。
 
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211217054102.png)
+![](http://pics.landcover100.com/pics//image/20211217054102.png)
 
 Sentinel-1在该模式下，使用 TOPSAR 技术。除了像 SCANSAR 在范围内控制波束外，还可以在每个脉冲串的方位方向上从后到前电子控制波束，避免扇形并产生更高质量的图像。多普勒频谱（在方位域中）和波数频谱（在仰角域中）的充分重叠确保了干涉测量。
 
@@ -81,7 +81,7 @@ Sentinel-1在该模式下，使用 TOPSAR 技术。除了像 SCANSAR 在范围�
 
 该模式主要用于海上和极地区域运营服务，满足覆盖面广，短重访时间要求。
 
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211217054722.png)
+![](http://pics.landcover100.com/pics//image/20211217054722.png)
 
 EW 模式的工作方式类似于 IW 模式，采用 TOPSAR 技术，使用五个子带而不是三个，导致分辨率较低（20 m x 40 m）。EW 模式和 IW 模式类似，同样可用于干涉测量。
 
@@ -89,7 +89,7 @@ EW 模式的工作方式类似于 IW 模式，采用 TOPSAR 技术，使用五�
 
 SENTINEL-1的WV模式与全球海浪模型相结合，用以确定海洋上波浪的方向、波长和高度。
 
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211217055257.png)
+![](http://pics.landcover100.com/pics//image/20211217055257.png)
 
 波模式由 20 公里 x 20 公里的条带图像组成，传感器两个不同的入射角上交替采集。每 100 公里采集一次波图像，同一入射角的影像相隔 200 公里。
 
@@ -97,11 +97,11 @@ SENTINEL-1的WV模式与全球海浪模型相结合，用以确定海洋上波�
 
 目前欧空局官网上提供4种产品数据下载，分别是原始数据RAW、SLC、GRD和OCN。
 
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211217063516.png)
+![](http://pics.landcover100.com/pics//image/20211217063516.png)
 
 生成一级数据产品所涉及的处理步骤包括预处理、多普勒质心估计、单视复聚焦、生成 SLC 产品、生成GRD 产品、影像后处理和用于组装多个子的模式特定处理。具体的生成过程如下所示:
 
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211217063408.png)
+![](http://pics.landcover100.com/pics//image/20211217063408.png)
 
 1 级数据可以处理成单视复数 (SLC) 和/或地面范围检测 (GRD) 产品。
 
@@ -120,7 +120,7 @@ OCN是针对Wave Mode推出的2级产品。
 - Google Earth Engine (https://code.earthengine.google.com/)
 - PIE Engine (https://engine.piesat.cn/engine/home)
 
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211217061344.png)
+![](http://pics.landcover100.com/pics//image/20211217061344.png)
 
 我这里比较推荐大家使用**地理空间数据云**进行下载，主要是两个原因：数据更新及时；国内下载**速度快**。
 
@@ -128,39 +128,39 @@ OCN是针对Wave Mode推出的2级产品。
 
 进入欧空局官网（https://scihub.copernicus.eu/）：
 
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211217061614.png)
+![](http://pics.landcover100.com/pics//image/20211217061614.png)
 
 点击进入Open Hub，如果有账号直接登录，没有账号点击Sign up：
 
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211217061707.png)
+![](http://pics.landcover100.com/pics//image/20211217061707.png)
 
 按要求填写个人资料，完成后点击Register：
 
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211217061954.png)
+![](http://pics.landcover100.com/pics//image/20211217061954.png)
 
 之后会弹出一个窗口，需要去自己的邮箱激活账号，进入自己的邮箱中跳转激活链接即可：
 
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211217062023.png)
+![](http://pics.landcover100.com/pics//image/20211217062023.png)
 
 账号激活后，登录主页面，鼠标左键勾选待下载区域影像：
 
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211217064352.png)
+![](http://pics.landcover100.com/pics//image/20211217064352.png)
 
 点击数据栏，进行数据筛选：
 
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211217062319.png)
+![](http://pics.landcover100.com/pics//image/20211217062319.png)
 
 在数据筛选栏，选择时间（两个时间sensing period和ingestion period，个人理解是采样时间和入库时间，未查到相关资料，一般来说选sensing period就行了）、极化方式、卫星、产品类型等：
 
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211217064444.png)
+![](http://pics.landcover100.com/pics//image/20211217064444.png)
 
 点击搜素按钮，会弹出相应影像，点击下载即可：
 
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211217064530.png)
+![](http://pics.landcover100.com/pics//image/20211217064530.png)
 
 # 哨兵二号
 
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211217022257.png)
+![](http://pics.landcover100.com/pics//image/20211217022257.png)
 
 # 哨兵三号
 
@@ -178,7 +178,7 @@ OCN是针对Wave Mode推出的2级产品。
 
 目前欧空局没有透露更多细节，后续卫星有进展，会在“地信遥感数据汇”网站（www.gisrsdata.com）上更新：
 
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211217030800.png)
+![](http://pics.landcover100.com/pics//image/20211217030800.png)
 
 # 哨兵工具
 
@@ -188,7 +188,7 @@ OCN是针对Wave Mode推出的2级产品。
 
 SNAP是适用于所有 Sentinel 工具箱的通用架构，是目前使用最广泛的Sentinel工具。
 
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211217033656.png)
+![](http://pics.landcover100.com/pics//image/20211217033656.png)
 
 SNAP 非常适合地球观测处理和分析。
 
@@ -204,7 +204,7 @@ S1TBX是处理Sentinel-1 数据的工具箱，用于校准、散斑过滤、配�
 
 Atmospheric Toolbox是用于摄取、处理和分析大气遥感数据的工具。该工具箱由CODA、HARP、VISAN和QDOAS四部分组成。
 
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211217032306.png)
+![](http://pics.landcover100.com/pics//image/20211217032306.png)
 
 下载地址为：https://atmospherictoolbox.org/
 
@@ -212,7 +212,7 @@ Atmospheric Toolbox是用于摄取、处理和分析大气遥感数据的工具�
 
  ESA和CNES联合开发的高度测量开源工具Broadview。
 
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211217032820.png)
+![](http://pics.landcover100.com/pics//image/20211217032820.png)
 
 该工具能够读取来自官方数据中心的所有测高数据（ERS -1 、ERS -12、Topex/Poseidon、Geosat Follow-on、Jason-1、Envisat、Jason-2、CryoSat和 Sentinel-3），并进行高度数据处理和可视化。
 
@@ -220,7 +220,7 @@ Atmospheric Toolbox是用于摄取、处理和分析大气遥感数据的工具�
 
 PolSARpro 用于开发极化 SAR 数据。
 
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211217032939.png)
+![](http://pics.landcover100.com/pics//image/20211217032939.png)
 
 下载地址为：https://step.esa.int/main/toolboxes/polsarpro-v6-0-biomass-edition-toolbox/
 

@@ -13,7 +13,7 @@ S11比赛正在如火如荼的举行。作为一个S3赛季的老玩家和地理
 因此这个地图应该有一个高分辨率的地图、高分辨率的地图，类似于栅格金字塔。同时有一个DEM数据对地形进行拉伸渲染。
 ## 1.2地图抓取
 亘古不变的F12键，查看从页面打开时的网页请求，找到png图片:
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211025012629.png)
+![](http://pics.landcover100.com/pics//image/20211025012629.png)
 
 
 ## 1.3英雄联盟地图结构解析

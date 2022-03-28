@@ -26,7 +26,7 @@ coverImg: # 轮播图片
 
 1 meter Digital Elevation Models  - 3DEP
 
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211120192022.png)
+![](http://pics.landcover100.com/pics//image/20211120192022.png)
 
 ## 1.2 数据背景
 
@@ -36,13 +36,13 @@ coverImg: # 轮播图片
 
 基于机载的干涉合成孔径雷达技术（IfSAR）
 
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211120203433.png)
+![](http://pics.landcover100.com/pics//image/20211120203433.png)
 
 ## 1.4 数据可用范围
 
 美国的大部分地区，如图所示的红色地带。
 
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211120185340.png)
+![](http://pics.landcover100.com/pics//image/20211120185340.png)
 
 # 2.下载方法
 
@@ -54,31 +54,31 @@ https://apps.nationalmap.gov/downloader/#/
 
 通过链接，进入下载页面，选中 Elevation Products (3DEP)：
 
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211120200200.png)
+![](http://pics.landcover100.com/pics//image/20211120200200.png)
 
 选择1m DEM，其他数据以角度单位显示，1 arc-second 大致为30m，如果实在没有1m的数据，可以选中其他数据：
 
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211120200304.png)
+![](http://pics.landcover100.com/pics//image/20211120200304.png)
 
 选择区域，点击Polygon：
 
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211120200539.png)
+![](http://pics.landcover100.com/pics//image/20211120200539.png)
 
 我们以旧金山地区为例，选中该区域
 
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211120200640.png)
+![](http://pics.landcover100.com/pics//image/20211120200640.png)
 
 点击search products，会弹出搜索结果：
 
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211120200914.png)
+![](http://pics.landcover100.com/pics//image/20211120200914.png)
 
 点击加入购物车，在购物车中点击下载选中区域的Tiff：
 
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211120201012.png)
+![](http://pics.landcover100.com/pics//image/20211120201012.png)
 
 待下载完成后，加入GIS软件中查看效果：
 
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211120201648.png)
+![](http://pics.landcover100.com/pics//image/20211120201648.png)
 
 
 

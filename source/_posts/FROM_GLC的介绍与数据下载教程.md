@@ -34,12 +34,12 @@ http://data.ess.tsinghua.edu.cn/fromglc2017v1.html，打开直接进入下载界
 ## 2.2遥感云计算下载方法
 
 由于工作原因，接触PIE-Engine的机会比较多。这几天用PIE-Engine时，发现了里面有FROM_GLC的10米分辨率数据(2017年)。
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211016233628.png) 
+![](http://pics.landcover100.com/pics//image/20211016233628.png) 
 有这个数据，就可以直接用PIE-Engine导出按行政边界裁剪的10米分辨率土地覆盖数据。
 
 ### 2.2.1 研究区准备
 在PIE里面上传研究区数据，我上传的是四川省_资阳市_乐至县的行政区数据。
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211016223921.png)
+![](http://pics.landcover100.com/pics//image/20211016223921.png)
 待数据上传后，与GEE不同，该研究区不能直接调用，需要转为geometry类型。
 ```javascript
 //研究区加载 LZ（四川省_资阳市_乐至县）
@@ -66,7 +66,7 @@ Map.addLayer(LZ_landcover_2017,visParam,"LZ_landcover_2017")
 
 PIE与GEE的裁剪不同，需要指定波段才能进行裁剪。  
 
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211016224900.png)
+![](http://pics.landcover100.com/pics//image/20211016224900.png)
 
 
 ### 2.2.3 数据导出
@@ -86,17 +86,17 @@ Export.image({
 
 ppqq 如果你不知道下载区域大小，maxPixels记得设置大一点；  
 
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211016230727.png)      
+![](http://pics.landcover100.com/pics//image/20211016230727.png)      
 
 ppqq PIE数据处理完之后，在PIE资源里面，点击文件即可下载；  
 
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211016225636.png)
+![](http://pics.landcover100.com/pics//image/20211016225636.png)
 
 ### 2.2.4 数据使用
 数据下载后，加载到gis软件里面，就可以看到研究区2017年的30米土地覆盖数据。
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211016234758.png)
+![](http://pics.landcover100.com/pics//image/20211016234758.png)
 10米的土地覆盖数据集，比30米的细腻很多:  
-![](https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20211016235013.png)
+![](http://pics.landcover100.com/pics//image/20211016235013.png)
 
 
 ### 2.2.5 代码链接

@@ -481,37 +481,37 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>行政区划数据是基础地理信息数据，是按各国行政单元进行的地理划分。不同国家的行政级别称呼不同，例如某些国家称第一级行政单位为省，某一些国家称之为州等。</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20220119005021.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20220119005021.png"></p>
 <p>目前中文互联网相关的行政区划数据整理文章不全面，本文整理了常用的行政区划数据来源与下载方式。前几种是世界各地的行政区划数据（包含中国），后几种是中国区划数据介绍。</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20220122161205.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20220122161205.png"></p>
 <h2 id="FAO-全球行政数据"><a href="#FAO-全球行政数据" class="headerlink" title="FAO 全球行政数据"></a>FAO 全球行政数据</h2><h3 id="数据介绍"><a href="#数据介绍" class="headerlink" title="数据介绍"></a>数据介绍</h3><p>FAO GAUL全球行政区数据（The Global Administrative Unit Layers）是国际粮农组织FAO在比尔盖茨基金会等组织的资金支持下制作的数据。该数据的制作流程为： a) 收集最可靠的来源信息；b) 建立地理特征；c) 由联合国制图单位（UNCS）进行制图。</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20220122163127.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20220122163127.png"></p>
 <p>GAUL数据集针对国家级别、第一级行政级别和第二级行政级别，建立了一套全球统一编码系统。针对各国的争议领土，GAUL 的方法是进一步处理这些领域，以维护所有争议国家的领土完整性（处理方法参考 Technicalaspects GAUL2015.pdf 和 G2015_DisputedAreas.dbf两份文件）。GAUL 因此被认为是全球的行政区划最佳数据，该数据集为全球行政区划数据的标准化做出了贡献。</p>
 <h3 id="数据浏览与下载"><a href="#数据浏览与下载" class="headerlink" title="数据浏览与下载"></a>数据浏览与下载</h3><h4 id="官网浏览数据"><a href="#官网浏览数据" class="headerlink" title="官网浏览数据"></a>官网浏览数据</h4><p>（1）进入FAO资源搜索目录（<a target="_blank" rel="noopener" href="https://data.apps.fao.org/map/catalog/srv/eng/catalog.search#/home%EF%BC%89%EF%BC%8C%E6%90%9C%E7%B4%A2FAO">https://data.apps.fao.org/map/catalog/srv/eng/catalog.search#/home），搜索FAO</a> gaul数据：</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20220122162940.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20220122162940.png"></p>
 <p>进入第一个搜索结果，即可看到该数据的详细信息：</p>
 <p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/img/202201211532724.jpg"></p>
 <p>将页面往下翻，可以获得数据浏览与WMS地址。</p>
 <p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/img/202201211605563.png"></p>
 <p>（2）点击add to map使用官方地图浏览器查看数据，点击详细可以获取数据详细信息。这里我们将level2级别数据加载到官网：</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20220122163154.jpg"></p>
+<p><img src="http://pics.landcover100.com/pics//image/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20220122163154.jpg"></p>
 <p>点击每一个矢量，可以弹出该矢量的具体信息。比如我们点击资阳就可出现资阳的信息：</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20220122163241.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20220122163241.png"></p>
 <h4 id="WMS浏览数据"><a href="#WMS浏览数据" class="headerlink" title="WMS浏览数据"></a>WMS浏览数据</h4><p>网络地图服务WMS ，Web Map Service，是利用具有地理空间位置信息的数据制作地图，其中将地图定义为地理数据的可视化表现。WMS地址可以用arcgis与qgis查看，但不能下载矢量数据。获得wms地址：<a target="_blank" rel="noopener" href="https://data.apps.fao.org/map/gsrv/gsrv1/gaul/wms%EF%BC%8C%E5%B0%86%E5%85%B6%E5%8A%A0%E8%BD%BD%E5%88%B0arcgis%E4%B8%AD%EF%BC%8C%E9%80%89%E6%8B%A9%E6%98%BE%E7%A4%BA%E7%9A%84%E5%9B%BE%E5%B1%82%EF%BC%8C%EF%BC%9A">https://data.apps.fao.org/map/gsrv/gsrv1/gaul/wms，将其加载到arcgis中，选择显示的图层，：</a></p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20220122163337.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20220122163337.png"></p>
 <p>显示后，可以看到全球的一个行政区分布情况：</p>
 <p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/img/202201211639177.png"></p>
 <p>但是需要注意：WMS服务<strong>只能浏览</strong>，即使下载也只能下载栅格影像。这里我推荐大家使用WFS服务。</p>
 <h4 id="WFS下载数据"><a href="#WFS下载数据" class="headerlink" title="WFS下载数据"></a>WFS下载数据</h4><p>网络要素服务WFS，Web Feature Service，支持用户对地理要素进行插入，更新，编辑等服务。使用WFS服务，需要用到QGIS，将获取到的wfs地址（<a target="_blank" rel="noopener" href="https://data.apps.fao.org/map/gsrv/gsrv1/gaul/wfs?version=1.1.0&amp;typeName=gaul:g2015_2014_1&amp;srsName=EPSG:4326&amp;maxFeatures=100000%EF%BC%89%E5%8A%A0%E8%BD%BD%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%AD%EF%BC%9A">https://data.apps.fao.org/map/gsrv/gsrv1/gaul/wfs?version=1.1.0&amp;typeName=gaul:g2015_2014_1&amp;srsName=EPSG%3A4326&amp;maxFeatures=100000）加载到服务器中：</a></p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20220122163411.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20220122163411.png"></p>
 <p>此时我们就可以显示矢量数据，并且可以选中以及查看属性表：</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20220122163428.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20220122163428.png"></p>
 <p>右键数据，点击导出，即可下载数据：</p>
 <p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/img/202201211651014.png"></p>
 <p>选中导出的数据格式为shp或者geojson，待下载完之后即可获得FAO的全球行政区矢量数据（包括第一级与第二级行政区）：</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20220122163455.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20220122163455.png"></p>
 <p>在下载第二级别数据时，速度较慢。我大概加载了10分钟左右才完全显示：</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20220122163517.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20220122163517.png"></p>
 <p>将下载的数据加载到arcgis中，即可使用：</p>
 <p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/img/202201211655427.png"></p>
 <h2 id="gdam数据"><a href="#gdam数据" class="headerlink" title="gdam数据"></a>gdam数据</h2><p>全球行政区域数据库gdam，the Database of Global Administrative Areas，是一个公共数据库，主要是全球各国各级的行政区域矢量库。该数据库提供免费的历史行政数据的下载，但不可用于商业用途。</p>
@@ -524,38 +524,38 @@
 <p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/img/202201211826711.png"></p>
 <p>如果是需要中国区域的数据，应该一起下载中国台湾、中国香港、中国澳门、印度等地的数据，最后做一个拼接。</p>
 <p>这里为了避免争议，我打开德国的地图看看数据质量，可以看到德国的数据质量，德国一共有4级数据（中国是3级数据）：</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20220122163549.jpg"></p>
+<p><img src="http://pics.landcover100.com/pics//image/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20220122163549.jpg"></p>
 <p>gdam数据是全世界范围内使用最广泛的行政区划数据，主要原因是该数据非商用免费、数据较精确、数据更新及时。</p>
 <h2 id="LSIB"><a href="#LSIB" class="headerlink" title="LSIB"></a>LSIB</h2><p>大规模国际边界数据集LSIB，the Large Scale International Boundaries，是由美国地理学家办公室制作的。需要注意该数据集采取依据是法院、法庭和国际仲裁的信息，并没有特意标出争议边界，不建议国内用户使用。</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20220122163628.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20220122163628.png"></p>
 <h4 id="数据下载"><a href="#数据下载" class="headerlink" title="数据下载"></a>数据下载</h4><p>打开网站（<a target="_blank" rel="noopener" href="https://geonode.state.gov/layers/catalog:geonode:LSIB%EF%BC%89%EF%BC%8C%E7%82%B9%E5%87%BB">https://geonode.state.gov/layers/catalog:geonode:LSIB），点击</a></p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20220121232654.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20220121232654.png"></p>
 <p>需要注意，该数据是只有国界线，即该数据是线矢量。</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20220122163647.jpg"></p>
+<p><img src="http://pics.landcover100.com/pics//image/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20220122163647.jpg"></p>
 <h2 id="HDX-数据"><a href="#HDX-数据" class="headerlink" title="HDX 数据"></a>HDX 数据</h2><p>HDX数据集是美国的人道协调厅（ROAP）收集的数据集，该数据集是由全球的志愿者贡献。</p>
 <p>下载方式是直接打开网址：<a target="_blank" rel="noopener" href="https://data.humdata.org/dataset">https://data.humdata.org/dataset</a>  ，搜索China - Subnational Administrative Boundaries，点击第一个数据进入并下载，该数据无需注册即可下载：</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20220122151608.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20220122151608.png"></p>
 <p>该数据集在中国拥有省、市两个级别，需要注意该数据集虽然有台湾，但是缺少西南部两个区域。</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20220122150834.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20220122150834.png"></p>
 <p>通过粗略对比，该数据集的质量对比gdam、FAO较差，市界别边界亦不准确，使用时作为参考即可。</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20220122151249.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20220122151249.png"></p>
 <h2 id="加州伯克利大学"><a href="#加州伯克利大学" class="headerlink" title="加州伯克利大学"></a>加州伯克利大学</h2><p>加州伯克利大学的图书馆数据中心提供中国1949年-2014年的中国行政边界，该数据是该密歇根大学中国数据中心制作。数据地址为：<a target="_blank" rel="noopener" href="https://geodata.lib.berkeley.edu/">https://geodata.lib.berkeley.edu/</a></p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20220122152303.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20220122152303.png"></p>
 <p>目前该数据仅供加州大学伯克利分校人员和去该校图书馆亲自访问用户开放。根据流露出的数据，数据很详细。</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20220122153019.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20220122153019.png"></p>
 <p>如果有伯克利大学的学生，可以试着下载，再分享给大家，也算是地信数据圈的幸事。</p>
 <h2 id="中科院环境科学与数据中心"><a href="#中科院环境科学与数据中心" class="headerlink" title="中科院环境科学与数据中心"></a>中科院环境科学与数据中心</h2><p>该数据来源为国际爱出地理信息，网址为：<a target="_blank" rel="noopener" href="https://www.resdc.cn/%E3%80%82">https://www.resdc.cn/。</a></p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20220122153350.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20220122153350.png"></p>
 <p>该数据只提供省数据免费下载，地级市、县等数据下载需付费。另外，使用时该数据集时需要注意数据及时性不足、数据的拓扑问题较大。该数据的国界边界没问题，因此下载省级数据是非常合适的。</p>
 <h2 id="各地图服务商"><a href="#各地图服务商" class="headerlink" title="各地图服务商"></a>各地图服务商</h2><p>天地图、高德地图、腾讯地图、百度地图提供行政区划数据。开发者不仅可以调用行政区划的数据接口，也可通过爬虫、连接地理数据库等方法可以获取行政区划矢量数据。这里我不做详细介绍。</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20220122154539.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20220122154539.png"></p>
 <h2 id="网友整理"><a href="#网友整理" class="headerlink" title="网友整理"></a>网友整理</h2><p>目前官方公布的数据质量较差、及时性不够，也有部分从业者对该数据进行整理。</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20220122155348.png"></p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20220122154918.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20220122155348.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20220122154918.png"></p>
 <h2 id="指导视频"><a href="#指导视频" class="headerlink" title="指导视频"></a>指导视频</h2><p>我录了一个教程视频关于各类数据的下载，可以简单看一下：</p>
-<h2 id="数据获取"><a href="#数据获取" class="headerlink" title="数据获取"></a>数据获取</h2><p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20220122170759.png"></p>
+<h2 id="数据获取"><a href="#数据获取" class="headerlink" title="数据获取"></a>数据获取</h2><p><img src="http://pics.landcover100.com/pics//image/20220122170759.png"></p>
 <p>我下载了FAO、gadm、LSIB、HDX等数据，供读者使用。数据下载地址为地信遥感数据汇  <a target="_blank" rel="noopener" href="http://www.gisrsdata.com/">www.gisrsdata.com</a>   中行政区文章的评论区。</p>
-<p><img src="https://gitee.com/kitmyfaceplease/image_upload/raw/master/image/20220122170516.png"></p>
+<p><img src="http://pics.landcover100.com/pics//image/20220122170516.png"></p>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>Learn geomatics - EA.Download Administrative boundaries</p>
 <p>Tech-tutor with Fitsum.How to Download Administrative Boundaries (Shapefiles) of Countries from GADM</p>
 <p>Giser Last.全国2010年以来县级行政区划数据梳理汇总</p>
